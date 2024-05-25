@@ -32,7 +32,7 @@
             this.menubodega = new FontAwesome.Sharp.IconMenuItem();
             this.menuvarietal = new FontAwesome.Sharp.IconMenuItem();
             this.menuactualizacion = new FontAwesome.Sharp.IconMenuItem();
-            this.menuTitulo = new System.Windows.Forms.MenuStrip();
+            this.menutitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
@@ -40,17 +40,16 @@
             // 
             // menu
             // 
-            this.menu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.menu.BackColor = System.Drawing.Color.Gainsboro;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menubodega,
             this.menuvarietal,
             this.menuactualizacion});
             this.menu.Location = new System.Drawing.Point(0, 67);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(855, 73);
+            this.menu.Size = new System.Drawing.Size(797, 73);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
-            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // menubodega
             // 
@@ -64,7 +63,6 @@
             this.menubodega.Size = new System.Drawing.Size(119, 69);
             this.menubodega.Text = "Registrar Bodega";
             this.menubodega.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menubodega.Click += new System.EventHandler(this.iconMenuItem1_Click);
             // 
             // menuvarietal
             // 
@@ -78,7 +76,6 @@
             this.menuvarietal.Size = new System.Drawing.Size(122, 69);
             this.menuvarietal.Text = "Registrar Varietal";
             this.menuvarietal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuvarietal.Click += new System.EventHandler(this.iconMenuItem2_Click);
             // 
             // menuactualizacion
             // 
@@ -92,18 +89,18 @@
             this.menuactualizacion.Size = new System.Drawing.Size(119, 69);
             this.menuactualizacion.Text = "Actualizar Bodegas";
             this.menuactualizacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuactualizacion.Click += new System.EventHandler(this.opcionImportarActualizacionBodega);
             // 
-            // menuTitulo
+            // menutitulo
             // 
-            this.menuTitulo.AutoSize = false;
-            this.menuTitulo.BackColor = System.Drawing.Color.Brown;
-            this.menuTitulo.Location = new System.Drawing.Point(0, 0);
-            this.menuTitulo.Name = "menuTitulo";
-            this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(855, 67);
-            this.menuTitulo.TabIndex = 1;
-            this.menuTitulo.Text = "menuStrip2";
-            this.menuTitulo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
+            this.menutitulo.AutoSize = false;
+            this.menutitulo.BackColor = System.Drawing.Color.Brown;
+            this.menutitulo.Location = new System.Drawing.Point(0, 0);
+            this.menutitulo.Name = "menutitulo";
+            this.menutitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menutitulo.Size = new System.Drawing.Size(797, 67);
+            this.menutitulo.TabIndex = 1;
+            this.menutitulo.Text = "menuStrip2";
             // 
             // label1
             // 
@@ -122,19 +119,20 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 140);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(855, 310);
+            this.contenedor.Size = new System.Drawing.Size(797, 403);
             this.contenedor.TabIndex = 3;
+            this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(855, 450);
+            this.ClientSize = new System.Drawing.Size(797, 543);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
-            this.Controls.Add(this.menuTitulo);
+            this.Controls.Add(this.menutitulo);
             this.MainMenuStrip = this.menu;
             this.Name = "Inicio";
             this.Text = "Form1";
@@ -149,7 +147,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.MenuStrip menuTitulo;
+        private System.Windows.Forms.MenuStrip menutitulo;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconMenuItem menubodega;
         private FontAwesome.Sharp.IconMenuItem menuvarietal;

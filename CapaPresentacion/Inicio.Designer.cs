@@ -121,7 +121,6 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(797, 403);
             this.contenedor.TabIndex = 3;
-            this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
             // 
             // Inicio
             // 
@@ -136,7 +135,6 @@
             this.MainMenuStrip = this.menu;
             this.Name = "Inicio";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Inicio_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.ResumeLayout(false);

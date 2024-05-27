@@ -17,5 +17,10 @@ namespace CapaEntidad
         public DateTime fechaUltimaActualizacion { get; set; }
         public int periodoActualizacion { get; set;} //en dias
 
+        public bool tieneActualizacionNovedadesVino(DateTime fechaActual)
+        {
+            int diferencia = (fechaActual - fechaUltimaActualizacion).Days;
+            return diferencia >= periodoActualizacion;
+        }
     }
 }

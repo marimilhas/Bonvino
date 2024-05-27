@@ -15,11 +15,16 @@ namespace CapaPresentacion
     {
         private static IconMenuItem menuActivo = null;
         private static Form formularioActivo = null;
-        public Inicio()
+
+        public Inicio() // contructor de la clase, no tocar pq se rompe todo
         {
             InitializeComponent();
         }
 
+        public void opcionImportarActualizacionBodega(object sender, EventArgs e) // ?? no se si es para eso pero va si o si
+        {
+            habilitarPantalla((IconMenuItem)sender, new frmBodegas());
+        }
         private void habilitarPantalla(IconMenuItem menu, Form formulario)
         {
             // tiene sentido si están desarrolladas las demás opciones
@@ -42,24 +47,6 @@ namespace CapaPresentacion
 
             contenedor.Controls.Add(formulario);
             formulario.Show();
-        }
-        
-        
-        private void opcionImportarActualizacionBodega(object sender, EventArgs e)
-        {
-            habilitarPantalla((IconMenuItem)sender, new frmBodegas());
-        }
-
-
-        // eliminar metodos de abajo - ver luego ahora no tengo ganas
-        private void contenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

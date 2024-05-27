@@ -15,8 +15,8 @@ namespace CapaDatos
                 descripcion = "Bodega fundada en 1890, especializada en vinos tintos.",
                 historia = "Historia rica en tradición vitivinícola.",
                 coordenadasUbicacion = "-33.9238, 18.4232",
-                fechaUltimaActualizacion = DateTime.Now, //VER
-                periodoActualizacion = 12 //VER
+                fechaUltimaActualizacion = new DateTime(2024, 1, 1), //VER - le puse fecha y periodo para probar
+                periodoActualizacion = 30 //VER
             },
             new Bodega
             {
@@ -33,8 +33,8 @@ namespace CapaDatos
                 descripcion = "Bodega familiar desde 1875, especializada en vinos reserva.",
                 historia = "Ha sido gestionada por seis generaciones de la familia Rioja.",
                 coordenadasUbicacion = "42.4602, -2.4455", //VER
-                fechaUltimaActualizacion = DateTime.Now,
-                periodoActualizacion = 8 //VER
+                fechaUltimaActualizacion = new DateTime(2024, 3, 18),
+                periodoActualizacion = 45 //VER
             },
             new Bodega
             {
@@ -46,5 +46,10 @@ namespace CapaDatos
                 periodoActualizacion = 10 //VER
             }
         };
+
+        public List<Bodega> Listar()
+        {
+            return lista;
+        }
     }
 }

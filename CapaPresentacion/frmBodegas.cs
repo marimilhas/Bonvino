@@ -7,24 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
     public partial class frmBodegas : Form
     {
-        public frmBodegas()
+        public frmBodegas() // constructor de la clase
         {
             InitializeComponent();
+            mostrarBodegasActualizables();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void mostrarBodegasActualizables() 
         {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            List<string> actualizables = new CN_Bodega().buscarBodegasActualizables();
+            dataGridView1.Rows.Clear();
+            foreach (string actualizable in actualizables)
+            {
+                dataGridView1.Rows.Add(actualizable,"");
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace CapaPresentacion
         private static IconMenuItem menuActivo = null;
         private static Form formularioActivo = null;
 
-        public Inicio() // contructor de la clase, no tocar pq se rompe todo
+        public Inicio() // contructor de la clase
         {
             InitializeComponent();
         }
@@ -25,6 +25,7 @@ namespace CapaPresentacion
         {
             habilitarPantalla((IconMenuItem)sender, new frmBodegas());
         }
+
         private void habilitarPantalla(IconMenuItem menu, Form formulario)
         {
             if (menuActivo != null) {

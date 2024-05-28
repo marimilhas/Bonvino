@@ -10,7 +10,13 @@ namespace CapaNegocio
 {
     public class CN_Bodega
     {
-        private CD_Bodega objcd_bodega = new CD_Bodega();
+        private CD_Bodega objcd_bodega = new CD_Bodega(); // instancia de la capa de datos
+        private List<string> bodegasSeleccionadas = new List<string>();
+
+        public void opcionImportarActualizacionBodegas() //?? no sé q hay q poner ahi pero de que va va
+        {
+
+        }
 
         private DateTime obtenerFechaActual()
         {
@@ -33,9 +39,9 @@ namespace CapaNegocio
             return nombresActualizables;
         }
 
-        public void opcionImportarActualizacionBodegas() //?? no sé q hay q poner ahi pero de que va va
+        public void tomarSeleccionBodega(string nombreBodega)
         {
-            
+            bodegasSeleccionadas.Add(nombreBodega);
         }
     }
 }

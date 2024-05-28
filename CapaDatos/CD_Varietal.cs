@@ -37,6 +37,30 @@ namespace CapaDatos
                 descripcion = "Merlot - Tempranillo",
                 porcentajeComposicion = 80,
                 tipoUva = new TipoUva { nombre = "Merlot", descripcion = "Vino combinado de uva Merlot y Tempranillo" }
+            },
+            new Varietal
+            {
+                descripcion = "Syrah - Grenache",
+                porcentajeComposicion = 65,
+                tipoUva = new TipoUva { nombre = "Syrah", descripcion = "Vino combinado de uva Syrah y Grenache" }
+            },
+            new Varietal
+            {
+                descripcion = "Sauvignon Blanc",
+                porcentajeComposicion = 100,
+                tipoUva = new TipoUva { nombre = "Sauvignon Blanc", descripcion = "Vino puro de uva Sauvignon Blanc" }
+            },
+            new Varietal
+            {
+                descripcion = "Riesling - Gewürztraminer",
+                porcentajeComposicion = 50,
+                tipoUva = new TipoUva { nombre = "Riesling", descripcion = "Vino combinado de uva Riesling y Gewürztraminer" }
+            },
+            new Varietal
+            {
+                descripcion = "Zinfandel - Cabernet Franc",
+                porcentajeComposicion = 70,
+                tipoUva = new TipoUva { nombre = "Zinfandel", descripcion = "Vino combinado de uva Zinfandel y Cabernet Franc" }
             }
         };
     }

@@ -15,11 +15,18 @@ namespace CapaEntidad
         public string historia { get; set;}
         public string coordenadasUbicacion { get; set; }
         public DateTime fechaUltimaActualizacion { get; set; }
-        public int periodoActualizacion { get; set;} //en dias
+        public int periodoActualizacion { get; set;} //en meses
 
         public bool tieneActualizacionNovedadesVino(DateTime fechaActual)
         {
-            int diferencia = (fechaActual - fechaUltimaActualizacion).Days;
+            int diferencia = (fechaActual.Year - fechaUltimaActualizacion.Year) * 12
+                        + fechaActual.Month - fechaUltimaActualizacion.Month;
+
+            if (fechaActual.Day < fechaUltimaActualizacion.Day)
+            {
+                diferencia--; 
+            }
+            
             return diferencia >= periodoActualizacion;
         }
     }

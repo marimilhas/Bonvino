@@ -251,6 +251,136 @@ namespace CapaDatos
                 bodega = cdBodega.lista[3] 
             });
 
+            // Vinos de Bodega El Legado
+            listaVinos.Add(new Vino
+            {
+                nombre = "Vino Tinto Gran Reserva",
+                añada = 2014,
+                notaDeCataBodega = "Un vino tinto gran reserva de El Legado con aromas complejos y notas de madera.",
+                precioArs = 2500,
+                fechaActualizacion = DateTime.Now.AddMonths(-12), // VER
+                imagenEtiqueta = "etiqueta_vino_tinto_gran_reserva.jpg",
+                varietal = new List<Varietal>
+                {
+                    cdVarietal.lista[0], 
+                    cdVarietal.lista[1]  
+                },
+                maridaje = new List<Maridaje>
+                {
+                    cdMaridaje.maridajes[0], 
+                    cdMaridaje.maridajes[4]  
+                },
+                bodega = cdBodega.lista[4]  
+            });
+
+            listaVinos.Add(new Vino
+            {
+                nombre = "Vino Blanco Joven",
+                añada = 2022,
+                notaDeCataBodega = "Un vino blanco joven de El Legado con frescura y aromas frutales.",
+                precioArs = 1100,
+                fechaActualizacion = DateTime.Now.AddMonths(-5), // VER
+                imagenEtiqueta = "etiqueta_vino_blanco_joven.jpg",
+                varietal = new List<Varietal>
+                {
+                    cdVarietal.lista[2], 
+                    cdVarietal.lista[5]  
+                },
+                maridaje = new List<Maridaje>
+                {
+                    cdMaridaje.maridajes[1], 
+                    cdMaridaje.maridajes[5]  
+                },
+                bodega = cdBodega.lista[4]  
+            });
+
+            // Vinos de Bodega La Cosecha
+            listaVinos.Add(new Vino
+            {
+                nombre = "Vino Tinto Reserva",
+                añada = 2017,
+                notaDeCataBodega = "Un vino tinto reserva de La Cosecha con aromas intensos y buena estructura.",
+                precioArs = 1900,
+                fechaActualizacion = DateTime.Now.AddMonths(-9), // VER
+                imagenEtiqueta = "etiqueta_vino_tinto_reserva.jpg",
+                varietal = new List<Varietal>
+                {
+                    cdVarietal.lista[3], 
+                    cdVarietal.lista[7]  
+                },
+                maridaje = new List<Maridaje>
+                {
+                    cdMaridaje.maridajes[0], 
+                    cdMaridaje.maridajes[3]  
+                },
+                bodega = cdBodega.lista[5]  
+            });
+
+            listaVinos.Add(new Vino
+            {
+                nombre = "Vino Rosado Semi-Seco",
+                añada = 2020,
+                notaDeCataBodega = "Un vino rosado semi-seco de La Cosecha con aromas a frutos rojos y frescura.",
+                precioArs = 1200,
+                fechaActualizacion = DateTime.Now.AddMonths(-7), // VER
+                imagenEtiqueta = "etiqueta_vino_rosado_semi_seco.jpg",
+                varietal = new List<Varietal>
+                {
+                    cdVarietal.lista[6], 
+                    cdVarietal.lista[8]  
+                },
+                maridaje = new List<Maridaje>
+                {
+                    cdMaridaje.maridajes[2], 
+                    cdMaridaje.maridajes[6]  
+                },
+                bodega = cdBodega.lista[5]  
+            });
+
+            // Vinos de Viña del Sol
+            listaVinos.Add(new Vino
+            {
+                nombre = "Vino Blanco de Autor",
+                añada = 2019,
+                notaDeCataBodega = "Un vino blanco de autor de Viña del Sol con complejidad y elegancia.",
+                precioArs = 1800,
+                fechaActualizacion = DateTime.Now.AddMonths(-8), // VER
+                imagenEtiqueta = "etiqueta_vino_blanco_de_autor.jpg",
+                varietal = new List<Varietal>
+                {
+                    cdVarietal.lista[2], 
+                    cdVarietal.lista[4]  
+                },
+                maridaje = new List<Maridaje>
+                {
+                    cdMaridaje.maridajes[1], 
+                    cdMaridaje.maridajes[3]  
+                },
+                bodega = cdBodega.lista[6]  
+            });
+
+            listaVinos.Add(new Vino
+            {
+                nombre = "Vino Tinto Joven",
+                añada = 2021,
+                notaDeCataBodega = "Un vino tinto joven de Viña del Sol con frescura y aromas frutales.",
+                precioArs = 1300,
+                fechaActualizacion = DateTime.Now.AddMonths(-6), // VER
+                imagenEtiqueta = "etiqueta_vino_tinto_joven.jpg",
+                varietal = new List<Varietal>
+                {
+                    cdVarietal.lista[0], 
+                    cdVarietal.lista[5]  
+                },
+                maridaje = new List<Maridaje>
+                {
+                    cdMaridaje.maridajes[2], 
+                    cdMaridaje.maridajes[4]  
+                },
+                bodega = cdBodega.lista[6]  
+            });
+
+
             return listaVinos;
         }
     }

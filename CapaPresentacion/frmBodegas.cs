@@ -13,6 +13,7 @@ namespace CapaPresentacion
 {
     public partial class frmBodegas : Form
     {
+        private CN_Bodega objcn_bodega = new CN_Bodega(); // instancia de la capa de negocio
         public frmBodegas() // constructor de la clase
         {
             InitializeComponent();
@@ -44,6 +45,25 @@ namespace CapaPresentacion
                 }
             }
         }
-        
+
+        private void tomarSeleccionBodega(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
+                string nombreBodega = fila.Cells["nombre"].Value.ToString();
+
+                objcn_bodega.tomarSeleccionBodega(nombreBodega); 
+
+                // Lo guardo de prueba por el momento
+                MessageBox.Show($"Bodega seleccionada: {nombreBodega}");
+            }
+
+        }
+
+        private void frmBodegas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

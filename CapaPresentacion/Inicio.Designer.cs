@@ -47,7 +47,7 @@
             this.menuactualizacion});
             this.menu.Location = new System.Drawing.Point(0, 67);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(797, 73);
+            this.menu.Size = new System.Drawing.Size(884, 73);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
@@ -98,7 +98,7 @@
             this.menutitulo.Location = new System.Drawing.Point(0, 0);
             this.menutitulo.Name = "menutitulo";
             this.menutitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menutitulo.Size = new System.Drawing.Size(797, 67);
+            this.menutitulo.Size = new System.Drawing.Size(884, 67);
             this.menutitulo.TabIndex = 1;
             this.menutitulo.Text = "menuStrip2";
             // 
@@ -119,7 +119,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 140);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(797, 403);
+            this.contenedor.Size = new System.Drawing.Size(884, 521);
             this.contenedor.TabIndex = 3;
             // 
             // Inicio
@@ -127,13 +127,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(797, 543);
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menutitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
+            this.MaximizeBox = false;
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

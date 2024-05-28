@@ -27,7 +27,6 @@ namespace CapaPresentacion
         }
         private void habilitarPantalla(IconMenuItem menu, Form formulario)
         {
-            // tiene sentido si están desarrolladas las demás opciones
             if (menuActivo != null) {
                 menuActivo.BackColor = Color.White;
             }
@@ -40,12 +39,17 @@ namespace CapaPresentacion
             }
 
             formularioActivo = formulario;
+
+            // Configurar el formulario como subformulario dentro de contenedor
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
             formulario.BackColor = Color.White;
 
+            // Agregar el formulario al contenedor
             contenedor.Controls.Add(formulario);
+            
+        
             formulario.Show();
         }
     }
